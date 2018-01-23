@@ -152,4 +152,9 @@ public class NoQuirks implements Quirks {
     public SqlParameterParsingStrategy getSqlParameterParsingStrategy() {
         return this.sqlParameterParsingStrategy;
     }
+
+    @Override
+    public char getPathSplitter() {
+        return '.';
+    }
 }

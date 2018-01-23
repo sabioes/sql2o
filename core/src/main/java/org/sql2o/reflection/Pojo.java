@@ -33,7 +33,7 @@ public class Pojo {
     public Object getProperty(String propertyPath, Quirks quirks){
         // String.split uses RegularExpression
         // this is overkill for every column for every row
-        int index = propertyPath.indexOf('.');
+        int index = propertyPath.indexOf(quirks.getPathSplitter());
 
         Getter getter;
 
@@ -86,7 +86,7 @@ public class Pojo {
     public void setProperty(String propertyPath, Object value, Quirks quirks){
         // String.split uses RegularExpression
         // this is overkill for every column for every row
-        int index = propertyPath.indexOf('.');
+        int index = propertyPath.indexOf(quirks.getPathSplitter());
         Setter setter;
         if (index > 0){
             final String substring = propertyPath.substring(0, index);

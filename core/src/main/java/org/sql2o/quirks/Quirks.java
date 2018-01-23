@@ -56,4 +56,6 @@ public interface Quirks {
     void closeStatement(Statement statement) throws SQLException;
 
     SqlParameterParsingStrategy getSqlParameterParsingStrategy();
+
+    char getPathSplitter();
 }

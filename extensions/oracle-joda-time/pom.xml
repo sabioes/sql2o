@@ -18,14 +18,21 @@
     <parent>
         <groupId>org.sql2o.extensions</groupId>
         <artifactId>extensions-parent</artifactId>
-        <version>1.6.0-RC4-SNAPSHOT</version>
+        <version>1.6.1</version>
     </parent>
+
+    <repositories>
+        <repository>
+            <id>atlassian</id>
+            <url>https://maven.atlassian.com/3rdparty/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.4</version>
+            <version>11.2.0.4.0-atlassian-hosted</version>
         </dependency>
 
         <!-- optional dependencies -->
@@ -40,7 +47,7 @@
         <dependency>
             <groupId>org.sql2o.extensions</groupId>
             <artifactId>sql2o-oracle</artifactId>
-            <version>1.6.0-RC4-SNAPSHOT</version>
+            <version>1.6.1</version>
             <scope>test</scope>
         </dependency>
 
